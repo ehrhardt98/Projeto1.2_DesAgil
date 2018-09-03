@@ -37,12 +37,12 @@ public class Controller implements ActionListener, KeyListener {
 			}
 		}
 		else if(arg0.getKeyCode() == KeyEvent.VK_S) {
-			if(row < board.getNumRows() && !board.isWall(row + 1, col)) {
+			if(row < board.getNumRows() - 1 && !board.isWall(row + 1, col)) {
 			humanPlayer.move(1, 0);
 			}
 		}
 		else if(arg0.getKeyCode() == KeyEvent.VK_D) {
-			if(col < board.getNumCols() && !board.isWall(row, col + 1)) {
+			if(col < board.getNumCols() - 1 && !board.isWall(row, col + 1)) {
 			humanPlayer.move(0, 1);
 			}
 		}
